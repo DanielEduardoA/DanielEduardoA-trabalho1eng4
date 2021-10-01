@@ -2,10 +2,9 @@ package br.edu.univas.factoy;
 
 public abstract class BaseLanchoneteFactory {
 
-    public abstract Lanche criarPedido(String tipo);
+    public abstract Lanche criarPedido(int opcao);
     
-    public void processarPedido(String tipo) {
-        Lanche lanche = criarPedido(tipo);
+    public void processarPedido(Lanche lanche) {
         lanche.adicionarIngredientes();
         lanche.prepararLanche();
         lanche.embalarLanche();

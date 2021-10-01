@@ -2,30 +2,24 @@ package br.edu.univas.factoy;
 
 public class LanchoneteFactory extends BaseLanchoneteFactory {
 
-    private static final String X_TUDO = "X Tudo";
-    private static final String X_CALABRESA = "X Calabresa";
-    private static final String VEGETARIANO = "vegetarianO";
-    private static final String X_SALADA = "X Salada";
-    private static final String X_BACON = "X Bacon";
-
     @Override
-    public Lanche criarPedido(String tipo) {
+    public Lanche criarPedido(int opcao) {
         Lanche lanche = null;
-        switch (tipo.toLowerCase())
+        switch (opcao)
         {
-            case X_TUDO:
+            case 1:
                 lanche = new LancheXTudo();
                 break;
-            case X_CALABRESA:
+            case 2:
                 lanche = new LancheXCalabresa();
                 break;
-            case VEGETARIANO:
+            case 3:
                 lanche = new LancheVegetariano();
                 break;
-            case X_SALADA:
+            case 4:
                 lanche = new LancheXSalada();
                 break;
-            case X_BACON:
+            case 5:
                 lanche = new LancheXBacon();
                 break;
             default:
